@@ -1,5 +1,7 @@
 # Deploy and Host Alpine Linux 3.24 Web Terminal with Railway
 
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/alpine-linux-324-web-terminal-browser-sh?referralCode=20H68q)
+
 An Alpine Linux 3.24 shell that opens in any browser. You work in bash as the user `alpine` with sudo, inside tmux, so sessions and long-running jobs survive closed tabs. A generated password protects the login, and your home directory sits on a persistent volume. Git, Python, Node.js 24 and everyday CLI tools come preinstalled in a small musl-based image.
 
 ## About Hosting Alpine Linux 3.24 Web Terminal
