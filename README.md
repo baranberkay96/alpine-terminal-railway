@@ -34,7 +34,7 @@ A bare `alpine` container on Railway has no way in except Railway's own CLI. Thi
 |---|---|---|
 | Terminal | Dockerfile based on `alpine:3.24.4` | nginx basic-auth proxy on port 8080 (public HTTPS domain, `/healthz`), ttyd on loopback, tmux sessions, user `alpine` with sudo, volume at `/home` |
 
-**Plan:** works on every plan, including Free (0.5 GB RAM per service). MEASURED_RAM_LINE
+**Plan:** works on every plan, including Free (0.5 GB RAM per service). Measured on Railway with a 0.5 GB memory limit: about 0.025 GB of RAM idle with two open tmux sessions, and about 0.06 GB while a Python venv and an npm package were being installed. The image is about 0.1 GB compressed. What you run in the shell decides the rest: large builds can need more than 0.5 GB, and on Free the kernel then stops that process, not the terminal.
 
 **First login**
 

@@ -113,6 +113,8 @@ prepare_home() {
     install -d -m 0750 -o "$LINUX_USER" -g "$LINUX_USER" "$HOME_DIR"
     cp -a /etc/skel/. "${HOME_DIR}/"
     chown -R "${LINUX_USER}:${LINUX_USER}" "$HOME_DIR"
+    # cp -a gives the home the mode of /etc/skel (0755).
+    chmod 0750 "$HOME_DIR"
   fi
 
   # Fix ownership of the top level only. A recursive chown of a large home
